@@ -1,0 +1,15 @@
+/*전 영역 관리*/
+@import url('https://fonts.googleapis.com/css?family=Jua');
+*{
+  font-family: 'Jua';
+}
+a{
+  color: #000000;
+  text-decoration: none;
+}
+a:hover{
+  color: #bbbbbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*내비게이션 영역*/
