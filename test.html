@@ -2,42 +2,159 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A-Lib</title>
-    <link rel="stylesheet" href="css\bootstrap.min.css">
-    <link rel="stylesheet" href="css\Alib.css">
+    <title>test</title>
   </head>
-
   <body>
-    <div class="container">
-       <h2>모달</h2>
-        <!-- 버튼 -->
-         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" > Launch demo modal </button>
-          <!-- 모달 팝업 --> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-           <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                   <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                  </div>
-                  <div class="modal-body">
-                     ...
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                       <button type="button" class="btn btn-primary">Save changes</button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-             <script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script>
-             <!-- ie10-viewport-bug-workaround.js -->
-             <script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script><!-- holder.js -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    var countseat = 0;
+    var seatarray = [[1, 0, 0, 1],[1,0,0,0],[0,0,1,0],[0,0,0,0]];
+
+    function makeseat(){
+      countseat = countseat+1;
+      return countseat;
+    }
+    var whatiscolor;
+    function selectseat(x, y){
+      if(seatarray[x][y] == 1){
+        alert("The Seat is Already Taken!");
+      }
+      else{
+        alert("You choosed the seat");
+        seatarray[x][y] = 1004;
+      }
+    }
+    function istherepeople(){
+
+      whatiscolor = 0;
+    }
+
+  </script>
+  <style type="text/css">
+    .wrapper {
+      display: grid;
+      text-align: center;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      border: 1px solid #444444;
+    }
+    .one {
+      grid-column: 1;
+      grid-row: 1;
+      border: 1px solid #444444;
+      background-color: #BC391C;
+    }
+    .two {
+      grid-column: 2;
+      grid-row: 1;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .three {
+      grid-column: 3;
+      grid-row: 1;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .four {
+      grid-column: 4;
+      grid-row: 1;
+      border: 1px solid #444444;
+      background-color: #BC391C;
+    }
+    .five {
+      grid-column: 1;
+      grid-row: 2;
+      border: 1px solid #444444;
+      background-color: #BC391C;
+    }
+    .six {
+      grid-column: 2;
+      grid-row: 2;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .seven {
+      grid-column: 3;
+      grid-row: 2;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .eight{
+      grid-column: 4;
+      grid-row: 2;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .nine{
+      grid-column: 1;
+      grid-row: 3;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .ten{
+      grid-column: 2;
+      grid-row: 3;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .B{
+      grid-column: 3;
+      grid-row: 3;
+      border: 1px solid #444444;
+      background-color: #BC391C;
+    }
+    .C{
+      grid-column: 4;
+      grid-row: 3;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .D{
+      grid-column: 1;
+      grid-row: 4;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .E{
+      grid-column: 2;
+      grid-row: 4;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .F{
+      grid-column: 3;
+      grid-row: 4;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+    .G{
+      grid-column: 4;
+      grid-row: 4;
+      border: 1px solid #444444;
+      background-color: #ffffff;
+    }
+  </style>
+  <button type="button" class="btn btn-success" onclick="javascript:istherepeople()">좌석 발급 신청</button>
+  <div class="wrapper">
+    <div class="one" id="one" onclick="javascript:selectseat(0,0)">1</div>
+    <div class="two" id="two" onclick="javascript:selectseat(0,1)">2</div>
+    <div class="three" id="three" onclick="javascript:selectseat(0,2)">3</div>
+    <div class="four" id="four" onclick="javascript:selectseat(0,3)">4</div>
+    <div class="five" id="five" onclick="javascript:selectseat(1,0)">5</div>
+    <div class="six" id="six" onclick="javascript:selectseat(1,1)">6</div>
+    <div class="seven" id="seven" onclick="javascript:selectseat(1,2)">7</div>
+    <div class="eight" id="eight" onclick="javascript:selectseat(1,3)">8</div>
+    <div class="nine" id="nine" onclick="javascript:selectseat(2,0)">9</div>
+    <div class="ten" id="ten" onclick="javascript:selectseat(2,1)">10</div>
+    <div class="B" id="B" onclick="javascript:selectseat(2,2)">11</div>
+    <div class="C" id="C" onclick="javascript:selectseat(2,3)">12</div>
+    <div class="D" id="D" onclick="javascript:selectseat(3,0)">13</div>
+    <div class="E" id="E" onclick="javascript:selectseat(3,1)">14</div>
+    <div class="F" id="F" onclick="javascript:selectseat(3,2)">15</div>
+    <div class="G" id="G" onclick="javascript:selectseat(3,3)">16</div>
+
+  </div>
+
   </body>
 </html>
