@@ -17,6 +17,12 @@
         text-shadow: black 0.2em 0.2em 0.2em;
         color: white;
       }
+      .point{
+        color: #5BE227;
+      }
+      .penalty{
+        color: #E82929;
+      }
     </style>
     <nav class="navbar navbar-inverse">
       <div class="container">
@@ -36,7 +42,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Information<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href-"#">개인정보</a></li>
+                <li><a href="OwnUserinfo.html">개인정보</a></li>
                 <li><a href-"#">대여현황</a></li>
                 <li><a href-"#">좌석정보</a></li>
               </ul>
@@ -52,22 +58,50 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">접속<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">로그인</a></li>
-                <li><a href="EmailValidation.html">이메일인증</a></li>
+                <li><a href-"#">로그인</a></li>
+                <li><a href-"#">이메일인증</a></li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    　
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="text-center">A-Lib</h1>
-        <p class="text-center">The Reading Room Manage Service</p>
-        <p class="text-center"><a class="btn btn-primary btn-lg" href="https://m.naver.com" role="button">Go to MainPage</a></p>
-      </div>
-    </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">UserInfo</h1>
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>UserName</h4>
+              <span class="text-muted">Current State</span>
+            </div>
+
+          </div>
+
+          <h2 class="sub-header">User history</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Seat</th>
+                  <th>Usetime</th>
+                  <th style="color: #5BE227">Point</th>
+                  <th style="color: #E82929">Penalty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2018.03.04</td>
+                  <td>C-327</td>
+                  <td>3:47:14</td>
+                  <td>100</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    　　　
     <footer style="background-color: #000000; color: #ffffff">
       <div class="container">
         <br>
@@ -82,5 +116,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
