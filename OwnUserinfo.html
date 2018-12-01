@@ -11,6 +11,14 @@
 
   <body>
     <style tpye="text/css">
+      <script type="text/javascript">
+          var userID = 201720697;
+          var totallink;
+          function makestring(){
+            totallink = "http://u-campus.ajou.ac.kr/ltms/usrextend/vew.usrextend?ajou_usr_idno=" + userID;
+            location.href=totallink;
+          }
+      </script>
       .jumbotron{
         background-image: url('images/jumbotronBackground.jpg');
         background-size: cover;
@@ -24,6 +32,7 @@
         color: #E82929;
       }
     </style>
+
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -43,7 +52,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Information<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="OwnUserinfo.html">개인정보</a></li>
-                <li><a href="#">대여현황</a></li>
+                <li><a href="http://u-campus.ajou.ac.kr/ltms/usrextend/vew.usrextend?ajou_usr_idno=201720697">좌석연장</a></li>
                 <li><a href="#">좌석정보</a></li>
               </ul>
             </li>
@@ -74,7 +83,6 @@
               <h4>UserName</h4>
               <span class="text-muted">Current State</span>
             </div>
-
           </div>
 
           <h2 class="sub-header">User history</h2>
@@ -92,7 +100,7 @@
               <tbody>
                 <tr>
                   <td>2018.03.04</td>
-                  <td>C-327</td>
+                  <td>C1-327</td>
                   <td>3:47:14</td>
                   <td>100</td>
                   <td>0</td>
