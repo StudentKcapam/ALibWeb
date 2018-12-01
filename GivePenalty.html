@@ -49,11 +49,12 @@
             <li class="active"><a href="#">About<span class="sr-only"></span></a></li>
             <li><a href="https://library.ajou.ac.kr/index.ax">Library Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Information<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="OwnUserinfo.html">개인정보</a></li>
                 <li><a onclick="makestring(userID)">좌석연장</a></li>
                 <li><a href="MakenewSeat.html">좌석정보</a></li>
+                <li><a href="GivePenalty.html">유저평가</a></li>
               </ul>
             </li>
           </ul>
@@ -76,20 +77,14 @@
       </div>
     </nav>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">UserInfo</h1>
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>UserName</h4>
-              <span class="text-muted">Current State</span>
-            </div>
-          </div>
+          <h1 class="page-header">EvaluatePage</h1>
 
           <h2 class="sub-header">User history</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
+                  <th>Name</th>
                   <th>Date</th>
                   <th>Seat</th>
                   <th>Usetime</th>
@@ -98,7 +93,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr onclick="javascript:alert('hellow')" >
+                  <td>강XX</td>
                   <td>2018.03.04</td>
                   <td>C1-327</td>
                   <td>3:47:14</td>
