@@ -7,6 +7,7 @@
     <title>A-Lib</title>
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="css\Alib.css">
+    <script src="js/login.js"></script>
   </head>
 
   <body>
@@ -16,6 +17,12 @@
         function makestring(){
           totallink = "http://u-campus.ajou.ac.kr/ltms/usrextend/vew.usrextend?ajou_usr_idno=" + userID;
           location.href=totallink;
+        }
+        var userEmailAddress;
+        var userPassword;
+        function takeEmailandPassword(){
+          userEmailAddress = document.getElementById("inputEmail");
+          userPassword = document.getElementById("inputPassword");
         }
     </script>
     <style tpye="text/css">
@@ -83,7 +90,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" id="loginbutton">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="loginbutton" onclick="javascript:takeEmailandPassword()">Sign in</button>
       </form>
     </div>
     　　　
